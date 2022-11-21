@@ -15,35 +15,35 @@
   margin-left: auto;
   margin-right: auto;
   height: 400px;
-  background-image: $hero-gradient, url(../../images/hero/hero-mob.jpg);
+  background-image: $hero-gradient, url(../images/hero/hero-mob.jpg);
   background-size: cover;
   background-position: center;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../../images/hero/hero-mob@2x.jpg);
+    background-image: url(../images/hero/hero-mob@2x.jpg);
   }
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
-    background-image: $hero-gradient, url(../../images/hero/hero-tab.jpg);
+    background-image: $hero-gradient, url(../images/hero/hero-tab.jpg);
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../../images/hero/hero-tab@2x.jpg);
+      background-image: url(../images/hero/hero-tab@2x.jpg);
     }
   }
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
     height: 600px;
-    background-image: $hero-gradient, url(../../images/hero/hero-dt.jpg);
+    background-image: $hero-gradient, url(../images/hero/hero-dt.jpg);
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../../images/hero/hero-dt@2x.jpg);
+      background-image: url(../images/hero/hero-dt@2x.jpg);
     }
   }
 }
