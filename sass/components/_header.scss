@@ -1,0 +1,98 @@
+@import "../utils/vars";
+@import "../utils/placeholders";
+
+.header {
+  border-bottom: 1px solid $primary-border-color;
+}
+/*main-nav*/
+
+.menu {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    flex-grow: 1;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+/*site-nav*/
+
+.site-nav {
+  @extend %list-unstyled;
+
+  display: flex;
+  gap: 50px;
+  flex: 1 1 auto;
+}
+/*Contacts nav */
+
+.contacts-nav {
+  @extend %list-unstyled;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $secondary-text-color;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color $timing-foo;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.site-nav__link--current {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 6px);
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}
+
+.contacts-nav__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: $primary-text-color;
+  transition: color $timing-foo;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.contacts-nav__icon {
+  fill: currentColor;
+}

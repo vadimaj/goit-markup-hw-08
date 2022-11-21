@@ -1,0 +1,29 @@
+@import "./mixins";
+body {
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+  font-family: $content-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+p,
+h2,
+h3 {
+  margin: 0;
+}
+.section__title {
+  color: $secondary-text-color;
+  @include textstyle(1.18, 33px, 700);
+  @media screen and (min-width: $desktop) {
+    @include textstyle(1.2, 36px, 700);
+  }
+}
+.link-unstyled {
+  text-decoration: none;
+  font-style: normal;
+}

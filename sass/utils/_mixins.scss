@@ -1,0 +1,18 @@
+@mixin center-content() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin сentering-xy() {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin textstyle($lh, $fsize: 14px, $fweight: 400) {
+  line-height: $lh;
+  font-size: $fsize;
+  font-weight: $fweight;
+}

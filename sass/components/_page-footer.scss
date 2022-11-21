@@ -1,0 +1,95 @@
+.page-footer {
+  background-color: $secondary-bgcolor;
+  padding: 60px 0;
+}
+.page-footer__body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 175px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 94px;
+    text-align: left;
+  }
+}
+
+.page-footer__item2 {
+  //outline: 1px dashed yellow;
+  @media screen and (min-width: $tablet) {
+    flex-basis: 100%;
+    padding-left: 151px;
+    padding-right: 137px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: auto;
+    padding: 0;
+  }
+}
+
+.page-footer__nav {
+  @extend %list-unstyled;
+}
+.page-footer__link {
+  color: $secondary-white-color;
+  line-height: 1.71;
+  transition: color 250ms $timing-foo;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &-accent {
+    color: $primary-white-color;
+  }
+}
+.page-footer__nav-item {
+  margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.page-footer__subtitle {
+  color: $primary-white-color;
+  @include textstyle(1.17, 14px, 700);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.page-footer__logo {
+  margin-bottom: 20px;
+}
+.page-footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0 15px;
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    column-gap: 12px;
+  }
+}
+.page-footer__input {
+  margin: 0;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $secondary-white-color;
+  background-color: $secondary-bgcolor;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}

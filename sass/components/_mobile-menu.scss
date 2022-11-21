@@ -1,0 +1,122 @@
+.mobile-menu {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  margin: 10px 8px 10px auto;
+  display: flex;
+  align-items: center;
+  transition: fill $timing-foo;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $primary-white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.mobile-menu__link {
+  display: block;
+  @include textstyle(1.17, 40px, 500);
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  transition: color $timing-foo;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-menu__phone-link {
+  @include textstyle(1.17, 34px, 500);
+
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+.mobile-menu__mail-link {
+  @include textstyle(1.17, 24px, 500);
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  transition: color $timing-foo;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.mobile-menu__social-link {
+  @include textstyle(1.22, 18px, 500);
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.mobile-menu__nav {
+  //outline: 1px dotted palevioletred;
+  @extend %list-unstyled;
+  & :not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  //outline: 1px dotted orangered;
+  vertical-align: bottom;
+  @extend %list-unstyled;
+  & :not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  margin-bottom: 64px;
+  flex: 1 1 auto;
+}
+.mobile-menu__social {
+  position: relative;
+  //outline: 1px dotted red;
+  @extend %list-unstyled;
+  display: flex;
+  gap: 20px;
+  & :not(:last-child)::after {
+    content: "";
+    position: absolute;
+    transform: translateX(10px);
+    height: 100%;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}

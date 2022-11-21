@@ -1,0 +1,37 @@
+/* Колір основного тексту #757575  */
+/* Вторинний колір #212121 */
+/* Основний чорний #000000 */
+/* Основний білий #FFFFFF */
+/* Вторинний білий rgba(255, 255, 255, 0.6) */
+/* Акцент #2196F3 */
+/* Вторинний акцент #188CE8 */
+/* Вторинний колір фону #2F303A */
+/* Третинний колір фону  #F5F4FA */
+
+$primary-text-color: #757575;
+$secondary-text-color: #212121;
+$primary-black-color: #000000;
+$primary-white-color: #ffffff;
+$secondary-white-color: rgba(255, 255, 255, 0.6);
+$accent-color: #2196f3;
+$secondary-accent-color: #188ce8;
+$hover-overlay-color: rgba(33, 150, 243, 0.9);
+$secondary-bgcolor: #2f303a;
+$tertiary-bgcolor: #f5f4fa;
+$primary-border-color: #ececec;
+$secondary-border-color: #eeeeee;
+$tertiary-border-color: #afb1b8;
+$logo-light-color: #ffffff;
+$logo-dark-color: #000000;
+$timing-foo: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$content-font: Roboto, sans-serif;
+$logo-font: Raleway, sans-serif;
+$mobile-min: 479px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+$hero-gradient: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+);

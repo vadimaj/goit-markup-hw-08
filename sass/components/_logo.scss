@@ -1,0 +1,14 @@
+/*  Logo  */
+
+.logo {
+  color: $accent-color;
+  display: inline-block;
+  font-family: $logo-font;
+  @include textstyle(1.2, 24px, 700);
+}
+.logo--dark {
+  color: $logo-dark-color;
+}
+.logo--light {
+  color: $logo-light-color;
+}

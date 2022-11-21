@@ -1,0 +1,29 @@
+/* Social icons styling */
+
+.social {
+  @extend %list-unstyled;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social__link {
+  @include center-content;
+  width: 44px;
+  height: 44px;
+  background-color: $primary-white-color;
+  color: $tertiary-border-color;
+  border-radius: 50%;
+  transition: background-color $timing-foo, color $timing-foo;
+  &--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $primary-white-color;
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+}
+.social__icon {
+  fill: currentColor;
+}
