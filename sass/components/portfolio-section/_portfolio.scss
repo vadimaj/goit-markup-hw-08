@@ -31,7 +31,6 @@
 
 .portfolio__card-list {
   @extend %list-unstyled;
-
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -39,15 +38,16 @@
   }
 }
 .portfolio__card-item {
-  max-width: 100%;
+  display: flex;
+  width: 100%;
   margin-bottom: 30px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 0;
 
-    max-width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
   @media screen and (min-width: $desktop) {
-    max-width: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 60px) / 3);
   }
   &:last-child {
     margin-bottom: 0;
