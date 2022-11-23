@@ -39,6 +39,7 @@
   fill: $primary-white-color;
   margin: 0 auto;
   @media screen and (min-width: $desktop) {
+    margin: 0;
   }
 }
 .portfolio__btn {

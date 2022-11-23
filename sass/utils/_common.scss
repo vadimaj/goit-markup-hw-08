@@ -18,7 +18,7 @@ h3 {
 }
 .section__title {
   color: $secondary-text-color;
-  @include textstyle(1.18, 33px, 700);
+  @include textstyle(1.18, 28px, 700);
   @media screen and (min-width: $desktop) {
     @include textstyle(1.2, 36px, 700);
   }

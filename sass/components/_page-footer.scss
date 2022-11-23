@@ -3,6 +3,7 @@
   padding: 60px 0;
 }
 .page-footer__body {
+  //outline: 2px dashed orangered;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -22,7 +23,7 @@
   }
 }
 
-.page-footer__item2 {
+.page-footer__item-subscribe {
   //outline: 1px dashed yellow;
   @media screen and (min-width: $tablet) {
     flex-basis: 100%;
@@ -65,7 +66,7 @@
 .page-footer__logo {
   margin-bottom: 20px;
 }
-.page-footer__subscribe {
+.page-footer__subscribe-form {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -75,7 +76,8 @@
   }
   @media screen and (min-width: $desktop) {
     flex-direction: row;
-    column-gap: 12px;
+    justify-content: flex-end;
+    gap: 12px;
   }
 }
 .page-footer__input {
@@ -91,5 +93,8 @@
   background-color: $secondary-bgcolor;
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 358px;
   }
 }
